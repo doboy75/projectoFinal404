@@ -36,17 +36,13 @@
 <div class="container ">
 
 <div class="d-flex justify-content-between py-5">
-<img src="../assets/logos/logo.png" :alt="marcasLogo">
-<img src="../assets/logos/logo (1).png" :alt="marcasLogo">
-<img src="../assets/logos/logo (2).png" :alt="marcasLogo">
-<img src="../assets/logos/logo (3).png" :alt="marcasLogo">
-<img src="../assets/logos/logo (4).png" :alt="marcasLogo">
-   
+<img src="../assets/logos/logo.svg" :alt="marcasLogo">
+<img src="../assets/logos/logo (1).svg" :alt="marcasLogo">
+<img src="../assets/logos/logo (2).svg" :alt="marcasLogo">
+<img src="../assets/logos/logo (3).svg" :alt="marcasLogo">
+<img src="../assets/logos/logo (4).svg" :alt="marcasLogo">
 </div>
-
 </div>
-
-
     </div>
 </template>
 
