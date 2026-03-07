@@ -1,6 +1,7 @@
 <template>
   <NavBar></NavBar>
   <HomePageFasco></HomePageFasco>
+  <DealsMonth></DealsMonth>
 
 
 
@@ -10,6 +11,7 @@
 
 <script>
 
+import DealsMonth from './components/DealsMonth.vue';
 import HomePageFasco from './components/HomePageFasco.vue'
 import NavBar from './components/NavBar.vue';
 
@@ -17,7 +19,7 @@ import NavBar from './components/NavBar.vue';
 
 export default {
   components: {
-NavBar,HomePageFasco
+NavBar,HomePageFasco,DealsMonth
   }
 }
 </script>
