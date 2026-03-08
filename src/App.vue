@@ -2,6 +2,13 @@
   <NavBar></NavBar>
   <HomePageFasco></HomePageFasco>
   <DealsMonth></DealsMonth>
+  <NewsArrivals></NewsArrivals>
+
+  <div> 
+    
+
+
+  </div>
 
 
 
@@ -14,12 +21,19 @@
 import DealsMonth from './components/DealsMonth.vue';
 import HomePageFasco from './components/HomePageFasco.vue'
 import NavBar from './components/NavBar.vue';
+import NewsArrivals from './components/NewsArrivals.vue';
 
 
 
 export default {
   components: {
-NavBar,HomePageFasco,DealsMonth
+NavBar,HomePageFasco,DealsMonth,NewsArrivals
+  },data(){
+
+    return{
+     
+
+    }
   }
 }
 </script>
@@ -32,6 +46,7 @@ NavBar,HomePageFasco,DealsMonth
   text-align: center;
   color: #2c3e50;
 }
+
 
 
 </style>
