@@ -3,6 +3,7 @@
   <HomePageFasco></HomePageFasco>
   <DealsMonth></DealsMonth>
   <NewsArrivals></NewsArrivals>
+  <HugoBoss></HugoBoss>
 
   <div> 
     
@@ -20,6 +21,7 @@
 
 import DealsMonth from './components/DealsMonth.vue';
 import HomePageFasco from './components/HomePageFasco.vue'
+import HugoBoss from './components/HugoBoss.vue';
 import NavBar from './components/NavBar.vue';
 import NewsArrivals from './components/NewsArrivals.vue';
 
@@ -27,7 +29,7 @@ import NewsArrivals from './components/NewsArrivals.vue';
 
 export default {
   components: {
-NavBar,HomePageFasco,DealsMonth,NewsArrivals
+NavBar,HomePageFasco,DealsMonth,NewsArrivals,HugoBoss
   },data(){
 
     return{
