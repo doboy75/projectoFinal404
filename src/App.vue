@@ -9,6 +9,7 @@
   <SubscribeFasco></SubscribeFasco>
   <FooterFasco></FooterFasco>
   <FashionFAsco></FashionFAsco>
+  <ProdutosFasco></ProdutosFasco>
 
 
   
@@ -33,6 +34,7 @@ import HomePageFasco from './components/HomePageFasco.vue'
 import HugoBoss from './components/HugoBoss.vue';
 import NavBar from './components/NavBar.vue';
 import NewsArrivals from './components/NewsArrivals.vue';
+import ProdutosFasco from './components/ProdutosFasco.vue';
 import SubscribeFasco from './components/SubscribeFasco.vue';
 import TestimonialFasco from './components/TestimonialFasco.vue';
 
@@ -41,7 +43,7 @@ import TestimonialFasco from './components/TestimonialFasco.vue';
 
 export default {
   components: {
-NavBar,HomePageFasco,DealsMonth,NewsArrivals,HugoBoss,FollowInstagram,TestimonialFasco,SubscribeFasco,FooterFasco,FashionFAsco
+NavBar,HomePageFasco,DealsMonth,NewsArrivals,HugoBoss,FollowInstagram,TestimonialFasco,SubscribeFasco,FooterFasco,FashionFAsco,ProdutosFasco
   },data(){
 
     return{
@@ -61,7 +63,6 @@ NavBar,HomePageFasco,DealsMonth,NewsArrivals,HugoBoss,FollowInstagram,Testimonia
   text-align: center;
   color: #2c3e50;
 }
-
 
 
 </style>

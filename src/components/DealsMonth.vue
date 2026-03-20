@@ -1,7 +1,7 @@
 <template>
 
 
-<div class=" container-fluid seccao-deals  bg-seccao-deals ">
+<div id="deals" class=" container-fluid seccao-deals  bg-seccao-deals ">
 <div class="container">
 <div class="row justify-content-center  ">
 <div class="col-md-6 text-start">

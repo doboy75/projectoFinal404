@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div id="home" class="container-fluid">
 <div class="container">
 <div class="row gap-3 d-flex justify-content-center">
     <div class="col-md-3  rounded-3 bgColorCard padding-card ">

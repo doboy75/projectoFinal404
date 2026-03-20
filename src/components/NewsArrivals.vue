@@ -1,6 +1,6 @@
 <template>
 
-<section class="newsArrivals container-fluid padding-top ">
+<section id="newarrivals" class="newsArrivals container-fluid padding-top ">
 
     <div class="container text-center">
 <div class="mb-5">
@@ -14,11 +14,11 @@
 
         <div  class="d-flex justify-content-center gap-4">
              
-                  <div class="colorText  py-3 px-5  p rounded-2 bg-btn" >Men’s Fashion</div>
-                    <div class="colorText  py-3 px-5  p rounded-2 bg-dark text-white shadow" >Women’s Fashion</div>
-                     <div class="colorText  py-3 px-5  p rounded-2 bg-btn" >Women Accessories</div>
-                        <div class="colorText  py-3 px-5  p rounded-2 bg-btn" >Men Accessories</div>
-                          <div class="colorText  py-3 px-5  p rounded-2 bg-btn" >Discount Deals</div>
+                  <div class="colorText  hover py-3 px-5  p rounded-2 bg-btn" >Men’s Fashion</div>
+                    <div class="colorText  hover py-3 px-5  p rounded-2 bg-dark text-white shadow" >Women’s Fashion</div>
+                     <div class="colorText hover py-3 px-5  p rounded-2 bg-btn" >Women Accessories</div>
+                        <div class="colorText hover  py-3 px-5  p rounded-2 bg-btn" >Men Accessories</div>
+                          <div class="colorText  hover py-3 px-5  p rounded-2 bg-btn" >Discount Deals</div>
         </div>
     </div>
 
@@ -104,10 +104,16 @@ export default{
 }
 
 .bg-btn{
-    background-color: #FAFAFA;
+   
 }
 
 .padding-top{
        padding-top: 141px;
 }
+
+.hover:hover{
+color: black;
+    cursor: pointer;
+}
+
 </style>

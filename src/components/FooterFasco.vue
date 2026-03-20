@@ -25,7 +25,7 @@
 
 </footer>
     
-  <router-view/>
+
 </template>
 
 <style scoped>
