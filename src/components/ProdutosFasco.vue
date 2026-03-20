@@ -1,4 +1,5 @@
 <template>
+    
 <div class="container py-5">
     <div class="row">
         <div class="col-md-6 d-flex">
@@ -6,7 +7,7 @@
     <ul class="list-unstyled">
 
         <li v-for="imagen in imagens" :key="imagen" class="mb-3">
-            <img :src="imagen" alt="imagens de roupas" class="img-thumbnail thumb" @click="mudarImg(imagen)">
+            <img :src="imagen.img" alt="imagens de roupas" class="img-thumbnail thumb" @click="mudarImg(imagen)">
 
         </li>
 
@@ -14,7 +15,7 @@
 </div>
 <div>
 
-    <img src="selecionarImage" alt="roupas" class="img-fluid img-principal">
+    <img src="../assets/35_056fa070-83a6-4279-8627-bbb11aace6e8.jpg (1).svg" alt="roupas" class="img-fluid img-principal">
 </div>
 
 
@@ -22,47 +23,76 @@
 
         <div class="col-md-6">
 
-            <h5 class="text-muted">FASCO</h5>
-            <h2> Denim Jacket</h2>
-            <div>
-               <img src="../assets/newsArrivals/Vector.svg" alt="estrelas">
-               <img src="../assets/newsArrivals/Vector.svg" alt="estrelas">
-               <img src="../assets/newsArrivals/Vector.svg" alt="estrelas">
-               <img src="../assets/newsArrivals/Vector.svg" alt="estrelas">
-               <img src="../assets/newsArrivals/Vector.svg" alt="estrelas">
+            <h5 class="text-muted text-color">FASCO</h5>
+          <div class="d-flex justify-content-between">
+              <h2> Denim Jacket</h2>    <img src="../assets/estrelas/Vector (4).svg" alt="estrelas">
+          </div>
+            <div class="mb-3">
+               <img src="../assets/estrelas/Vector (3).svg" alt="estrelas">
+               <img src="../assets/estrelas/Vector (3).svg" alt="estrelas">
+               <img src="../assets/estrelas/Vector (3).svg" alt="estrelas">
+               <img src="../assets/estrelas/Vector (3).svg" alt="estrelas">
+               <img src="../assets/estrelas/Vector (4).svg" alt="estrelas">
+              
+               (3)
 
             </div>
-            <h4>$39.00 
-                <span class="text-decoration-line-through fs-6">$55.00</span>
-                <span class="badge -bg-danger">-30%</span>
+            <h4 class="mb-4">$39.00 
+                <span class="text-decoration-line-through fs-6 text-cor fs-3" >$59.00</span>
+                <span class="text-white bg-danger fs-6 rounded-4 py-1 px-3 ms-2">SAVE -30%</span>
             </h4>
+            <div class="mb-4 ">
+                <span class="me-3"><img src="../assets/estrelas/Vector (5).svg" alt=""></span>
+                <span class="text-color text-decoration-inline-block  ">24 people are viewing this right now</span>
+
+            </div>
             <div class="alert alert-danger py-2">
 Hurry up! Sale ends in:{{ tempo }}
             </div>
 
             <div class="mb-3">
-                <p class="fw-bold">Size</p>
+                <p class="fw-bold fs-4">Size:M</p>
                 <button v-for="size in sizes" :key="size" class="btn btn-outline-dark me-2" :class="{active: tamanhoSelecionado===size}" @click=" selecionarTamanho(size)">{{ size }}</button>
             </div>
             <div class="mb-3">
-<p class="fw-bold ">Color:</p>
+<p class="fw-bold fs-4 ">Color:Blue</p>
 <span v-for="core in cores" :key="core" class="color-circulo me-2" :style="{ background:core}" @click="selecionarCor(core)"></span>
 
             </div>
 
-            <div class="d-flex align-items-center mb-3">
+            <div class="text-cor fs-4 mb-3">quantity</div>
+            <div class="d-flex align-items-center gap-3 my-3">
 
-                <button class="btn btn-outline-secondary" @click="diminuir">-</button>
+             <div class="d-flex justify-content-center align-items-center  border fs-4 ">
+                   <button class="btn fs-4 " @click="diminuir">-</button>
                 <span class="mx-3">{{ quantidade }}</span>
                 
-                <button class="btn btn-outline-secondary" @click="aumentar">+</button>
+                <button class="btn fs-4" @click="aumentar">+</button>
+             </div>
+                    <button class="btn btn-outline-secondary border-dark border-2 w-100">Add To cart</button>
             </div> 
-            <button class="btn btn-dark w-100">Add To cart</button>
+
+            <div class="d-flex justify-content-between fs-5 border-dark border-bottom py-4 ">
+                <div><span ><img src="../assets/Nova pasta/Vector (6).svg" alt="seta">Compare</span></div>
+                  <div><span ><img src="../assets/Nova pasta/Vector (7).svg" alt="seta">Ask a question</span></div>
+                    <div><span ><img src="../assets/Nova pasta/Vector (8).svg" alt="seta">Compare</span></div>
+            </div>
+
+            <span class="fs-5 py-5 fw-bold "><img src="../assets/Nova pasta/Vector (9).svg" alt="logo"> Estimated Delivery: <div class="muted text-cor  ">Jul 30 .Aug 03</div></span>
+               <span class="fs-4 fw-bold "><img src="../assets/Nova pasta/Vector (10).svg" alt="logo"> Free Shipping & Returns: <div class="muted text-cor  ">On all orders over $75</div></span>
+        
         </div>
     </div>
 
 
 </div>
+
+
+
+
+
+
+
 
 </template>
 
@@ -70,15 +100,19 @@ Hurry up! Sale ends in:{{ tempo }}
     data(){
         return{
             imagens:[
-               {img:new URL('../assets/newsArrivals/Images (1).svg', import.meta.url).href},
-                {img:new URL('../assets/newsArrivals/Images (2).svg', import.meta.url).href},
-                 {img:new URL('../assets/newsArrivals/Images (3).svg', import.meta.url).href},
-                  {img:new URL('../assets/newsArrivals/Images (4).svg', import.meta.url).href},
-                   {img:new URL('../assets/newsArrivals/Images (5).svg', import.meta.url).href},
-            ],selecionarImage:{img:new URL('../assets/newsArrivals/Images (1).svg', import.meta.url).href}
-            ,sizes:["S","M","L","XL"],
+                
+               {img:new URL('../assets/produtos/35h.jpg.svg', import.meta.url).href},
+                {img:new URL('../assets/produtos/35_056fa070-83a6-4279-8627-bbb11aace6e8.jpg.svg', import.meta.url).href},
+                 {img:new URL('../assets/produtos/35a_ec779b58-f23e-478c-b196-685009bbe4c6.jpg.svg', import.meta.url).href},
+                  {img:new URL('../assets/produtos/35b_7e4a33fc-59f4-4a6e-88f8-030c501ae8ad.jpg.svg', import.meta.url).href},
+                   {img:new URL('../assets/produtos/35c_a4f661f6-7857-43d8-8894-3ba193916223.jpg.svg', import.meta.url).href},
+ {img:new URL('../assets/produtos/35e.jpg.svg', import.meta.url).href},
+
+            ],selecionarImage:{img:new URL('../assets/produtos/35d.jpg.svg', import.meta.url).href}
+
+            ,sizes:["M","L","XL","XXL"],
             tamanhoSelecionado:["M"],
-            cores:["red","blue","pink"],
+            cores:["#8DB4D2","#000000","#FFD1DC"],
             corSelecionado:["red"],
             quantidade:1,
             tempo:"00,05:59"
@@ -122,6 +156,10 @@ Hurry up! Sale ends in:{{ tempo }}
     display: inline-block;
     cursor: pointer;
     border: 2px solid #ccc;
+}
+
+.text-cor{
+    color: #666666;
 }
 
 </style>
