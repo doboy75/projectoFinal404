@@ -1,23 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg    mb-5 ">
-<div class="container d-flex justify-content-between  px-5" id="navegacao">
-    <RouterLink to="" class="navbar-brand fs-2 fw-bold ">FASCO</RouterLink>
-<ul class="navbar-nav align-items-center gap-4">
-    <li class="nav-item"><RouterLink to="" class="nav-link custom-hove">Home</RouterLink></li>
-      <li class="nav-item"><RouterLink to="" class="nav-link custom-hove">Shop</RouterLink></li>
-        <li class="nav-item"><RouterLink to="" class="nav-link custom-hove">Products</RouterLink></li> 
-        <li class="nav-item"><RouterLink to="" class="nav-link custom-hove">Pages</RouterLink></li>     
-</ul>
+    <NavReutilizavel></NavReutilizavel>
 
-<div class="d-flex gap-3 justify-content-center align-items-center">
-    <img src="../assets/fashion/Vector (2).svg" alt="">
-    <img src="../assets/fashion/Vector (3).svg" alt="">
-    <img src="../assets/fashion/Vector (4).svg" alt="">
-    <img src="../assets/fashion/Vector (5).svg" alt="">
-
-</div>
-</div>
-</nav>
 <div class="container py-5">
     <div class="row">
         <div class="col-md-6 d-flex">
@@ -90,14 +73,20 @@ Hurry up! Sale ends in:{{ tempo }}
                     <button class="btn btn-outline-secondary border-dark border-2 w-100">Add To cart</button>
             </div> 
 
-            <div class="d-flex justify-content-between fs-5 border-dark border-bottom py-4 ">
-                <div><span ><img src="../assets/Nova pasta/Vector (6).svg" alt="seta">Compare</span></div>
-                  <div><span ><img src="../assets/Nova pasta/Vector (7).svg" alt="seta">Ask a question</span></div>
-                    <div><span ><img src="../assets/Nova pasta/Vector (8).svg" alt="seta">Compare</span></div>
+            <div class="d-flex justify-content-between fs-5 border-dark border-bottom py-3 mb-4 ">
+                <div><span ><img src="../assets/Nova pasta/Vector (6).svg" alt="seta"> Compare</span></div>
+                  <div><span ><img src="../assets/Nova pasta/Vector (7).svg" alt="seta"> Ask a question</span></div>
+                    <div><span ><img src="../assets/Nova pasta/Vector (8).svg" alt="seta"> Compare</span></div>
             </div>
 
-            <span class="fs-5 py-5 fw-bold "><img src="../assets/Nova pasta/Vector (9).svg" alt="logo"> Estimated Delivery: <div class="muted text-cor  ">Jul 30 .Aug 03</div></span>
-               <span class="fs-4 fw-bold "><img src="../assets/Nova pasta/Vector (10).svg" alt="logo"> Free Shipping & Returns: <div class="muted text-cor  ">On all orders over $75</div></span>
+            <div class=" py-2  "><img src="../assets/Nova pasta/Vector (9).svg" alt="logo"> <span class="fw-bold fs-5"> Estimated Delivery:</span> <div class="muted text-cor  ">Jul 30 .Aug 03</div></div>
+            <div class=" py-2  "><img src="../assets/Nova pasta/Vector (10).svg" alt="logo"> <span class="fw-bold fs-5"> Free Shipping & returns:</span> <div class="muted text-cor  "> On all orders over $75</div></div>
+               
+            <div class="py-3 px-5 bg-light text-center mt-3">
+
+                <span class="mb-2 text-decoration-inline-block"><img src="../assets/Nova pasta/trustbag.png.svg" alt=""></span>
+                <h5 class="mt-2">Guarantee safe & segure checkout</h5>
+            </div>
         
         </div>
     </div>
@@ -107,14 +96,27 @@ Hurry up! Sale ends in:{{ tempo }}
 
 
 
-
+<HugoBoss></HugoBoss>
+<DealsMonth></DealsMonth>
+<SubscribeFasco></SubscribeFasco>
+<FooterFasco></FooterFasco>
 
 
 
 
 </template>
 
-<script>export default{
+<script>
+import DealsMonth from './DealsMonth.vue';
+import FooterFasco from './FooterFasco.vue';
+import HugoBoss from './HugoBoss.vue';
+import NavReutilizavel from './NavReutilizavel.vue';
+import SubscribeFasco from './SubscribeFasco.vue';
+export default{
+
+    components:{
+        NavReutilizavel,HugoBoss,DealsMonth,SubscribeFasco,FooterFasco
+    },
     data(){
         return{
             imagens:[

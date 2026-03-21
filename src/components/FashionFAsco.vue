@@ -131,11 +131,21 @@
 
 <img src="" alt="">
 
-  <router-view/>
+<HugoBoss></HugoBoss>
+<FollowInstagram></FollowInstagram>
+<SubscribeFasco></SubscribeFasco>
+<FooterFasco></FooterFasco>
 </template>
 
 
-<script>export default{
+<script>
+import FollowInstagram from './FollowInstagram.vue';
+import FooterFasco from './FooterFasco.vue';
+import HugoBoss from './HugoBoss.vue';
+import SubscribeFasco from './SubscribeFasco.vue';
+
+export default{
+    components:{HugoBoss,FollowInstagram,SubscribeFasco,FooterFasco},
 
 data(){
     return{
