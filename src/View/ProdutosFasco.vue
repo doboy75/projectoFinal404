@@ -47,8 +47,8 @@
                 <span class="text-color text-decoration-inline-block  ">24 people are viewing this right now</span>
 
             </div>
-            <div class="alert alert-danger py-2">
-Hurry up! Sale ends in:{{ tempo }}
+            <div class="alert alert-danger py-2 d-flex justify-content-between">
+Hurry up! Sale ends in: <div>00:</div> <div>: 05</div> <div>: 59</div>
             </div>
 
             <div class="mb-3">

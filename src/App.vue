@@ -1,19 +1,11 @@
 <template>
-  <NavBar></NavBar>
-  <HomePageFasco></HomePageFasco>
-  <DealsMonth></DealsMonth>
-  <NewsArrivals></NewsArrivals>
-  <HugoBoss></HugoBoss>
-  <FollowInstagram></FollowInstagram>
-  <TestimonialFasco></TestimonialFasco>
-  <SubscribeFasco></SubscribeFasco>
-  <FooterFasco></FooterFasco>
+
   <!-- <FashionFAsco></FashionFAsco>
-  <ProdutosFasco></ProdutosFasco> -->
-  <!-- <ShoppingCart></ShoppingCart>
-  <ShoppingCart2></ShoppingCart2> -->
-  <!-- <SigninFasco></SigninFasco> -->
-  <!-- <ForgetPassword></ForgetPassword> -->
+  <ProdutosFasco></ProdutosFasco>  -->
+   <!-- <ShoppingCart></ShoppingCart>
+  <ShoppingCart2></ShoppingCart2> 
+   <SigninFasco></SigninFasco> 
+  <ForgetPassword></ForgetPassword>  -->
   
 
 
@@ -29,31 +21,25 @@
 
 <script>
 
-import DealsMonth from './components/DealsMonth.vue';
-// import FashionFAsco from './components/FashionFAsco.vue';
-import FollowInstagram from './components/FollowInstagram.vue';
-import FooterFasco from './components/FooterFasco.vue';
+//  import FashionFAsco from './components/FashionFAsco.vue';
+
 // import ForgetPassword from './components/ForgetPassword.vue';
-import HomePageFasco from './components/HomePageFasco.vue'
-import HugoBoss from './components/HugoBoss.vue';
-import NavBar from './components/NavBar.vue';
-import NewsArrivals from './components/NewsArrivals.vue';
+
 // import ProdutosFasco from './components/ProdutosFasco.vue';
-// import ShoppingCart from './components/ShoppingCart.vue';
-// import ShoppingCart2 from './components/ShoppingCart2.vue';
-// import SigninFasco from './components/SigninFasco.vue';
-import SubscribeFasco from './components/SubscribeFasco.vue';
-import TestimonialFasco from './components/TestimonialFasco.vue';
+//  import ShoppingCart from './components/ShoppingCart.vue';
+//  import ShoppingCart2 from './components/ShoppingCart2.vue';
+//  import SigninFasco from './components/SigninFasco.vue';
+
 
 
 
 
 export default {
   components: {
-NavBar,HomePageFasco,DealsMonth,NewsArrivals,HugoBoss,FollowInstagram,TestimonialFasco,SubscribeFasco,FooterFasco
 
 
-// ,FashionFAsco,ProdutosFasco,SigninFasco,ForgetPassword,ShoppingCart,ShoppingCart2
+
+//  ,FashionFAsco,ProdutosFasco,SigninFasco,ForgetPassword,ShoppingCart,ShoppingCart2
   },data(){
 
     return{
