@@ -52,6 +52,14 @@ const routes = [
      component: () => import( '../View/CheckoutPage.vue') 
 
   }
+     ,
+   {
+    path:'/singup',
+    name:'singup',
+     component: () => import( '../components/SingupCreate.vue') 
+
+  }
+
 
   
 

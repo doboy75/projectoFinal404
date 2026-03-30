@@ -5,7 +5,7 @@
     <h2 class="brand mb-4">FASCO Demo Checkout</h2>
   </NavReutilizavel>
 
-  <div class="container">
+  <div class="container border-black border-bottom">
     <div class="row mt-5">
       <div class="col-md-6">
         <div class="d-flex justify-content-between align-items-center">
@@ -69,7 +69,7 @@
           </div>
           <div class="col-md-6">
             <input
-              type="text"
+              type="number"
               placeholder="Postal Code"
               v-model="delivery.postalCode"
               class="form-control border-black border-2 p-3 rounded-0"
@@ -84,6 +84,9 @@
           />
           <label class="form-check-label"> Save this info for future</label>
         </div>
+
+        <!-- Pagamentos -->
+
         <h3 class="mt-5">Payment</h3>
         <select
           class="form-select rounded-0 border-black border-2 p-3"
@@ -93,7 +96,48 @@
           <option value="Multicaixa express">Multicaixa express</option>
           <option value="Visa Card">Visa Card</option>
         </select>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <div>
+            <input
+              type="number"
+              placeholder="Expiration Date"
+              v-model="payment.expirationDate"
+              class="form-control border-black border-2 p-3 rounded-0"
+            />
+          </div>
+          <div>
+            <input
+              type="number"
+              placeholder="Segurity Code"
+              v-model="payment.SegurityCode"
+              class="form-control border-black border-2 p-3 rounded-0"
+            />
+          </div>
+        </div>
+        <input
+          type="number"
+          placeholder="card Hold Name"
+          v-model="payment.cardHoldName"
+          class="mb-3 mt-3 form-control border-black border-2 p-3 rounded-0"
+        />
+        <div class="form-check fs-4">
+          <input
+            type="checkbox"
+            v-model="delivery.saveinfor"
+            class="form-check-input rounded-0 border-black border-4"
+          />
+          <label class="form-check-label"> Save this info for future</label>
+        </div>
+
+        <button class="btn btn-dark w-100 my-3 shadow">Pay Now</button>
+
+        <small class="text-center pb-5"
+          ><a href="#" class="text-decoration-none text-black small d-block"
+            >copyright 2022 FASCO .All rights Rasaved</a
+          ></small
+        >
       </div>
+
       <div class="col-md-6 ps-5">
         <div class="d-flex align-items-center gap-3">
           <img src="../assets/produtos/Rectangle 19265 (1).svg" alt="" />
@@ -132,14 +176,18 @@
       </div>
     </div>
   </div>
+
+  <SubscribeFasco></SubscribeFasco>
 </template>
 
 <script>
+import SubscribeFasco from "@/components/SubscribeFasco.vue";
 import NavReutilizavel from "./NavReutilizavel.vue";
 
 export default {
   components: {
     NavReutilizavel,
+    SubscribeFasco,
   },
 
   data() {
@@ -158,6 +206,13 @@ export default {
         },
       ],
 
+      payment: {
+        SegurityCode: "",
+        expirationDate: "",
+        cardName: "",
+        cardNumber: "",
+        cardHoldName: "",
+      },
       checkoutData: {
         price: "$100.00",
         discountCode: "",
