@@ -5,16 +5,10 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    //component: HomeView
+     
+    component: ()=> import('../View/HomePrincipal.vue')
   },
-  {
-    path: '/deals',
-    name: 'deals',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-   component: () => import( '../components/DealsMonth.vue') 
-  },
+ 
   {
      path: '/SinginFasco',
     name: 'SinginFasco',
@@ -25,16 +19,47 @@ const routes = [
     name: 'ForgetPassworld',
      component: () => import( '../View/ForgetPassword.vue') 
   },
-      {
-     path: '/NewsArraivals',
-    name: 'NewsArraivals',
-     component: () => import( '../components/NewsArrivals.vue') 
+  {
+    path:'/produtos',
+    name:'produto',
+     component: () => import( '../View/ProdutosFasco.vue') 
+
   },
-       {
-     path: '/',
-    name: 'Home',
-     component: () => import( '../View/HomePrincipal.vue') 
-  },
+   {
+    path:'/shopping',
+    name:'shopping',
+     component: () => import( '../View/ShoppingCart.vue') 
+
+  }
+  ,
+   {
+    path:'/shoppingcart2',
+    name:'shopping2',
+     component: () => import( '../View/ShoppingCart2.vue') 
+
+  }
+    ,
+   {
+    path:'/fashion',
+    name:'fashion',
+     component: () => import( '../View/FashionFAsco.vue') 
+
+  }
+      ,
+   {
+    path:'/checkout',
+    name:'checkout',
+     component: () => import( '../View/CheckoutPage.vue') 
+
+  }
+
+  
+
+
+
+
+  
+
 ]
 const router = createRouter({
   history: createWebHistory(),
