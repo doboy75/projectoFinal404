@@ -1,20 +1,18 @@
 <template>
   <div
-    class="container-fluid vh-100 d-flex align-items-center justify-content-center"
+    class="container vh-100 d-flex align-items-center justify-content-center"
   >
-    <div
-      class="row shadow rounded overflow-hidden login-box justify-content-center"
-    >
-      <div class="col-md-6 p-0">
+    <div class="container row shadow rounded justify-content-center">
+      <div class="col-md-5">
         <img
           src="../assets/Rectangle 19280.svg"
           alt="login"
-          class="img-fluid w-100 h-100 cover"
+          class="img-fluid"
         />
       </div>
-      <div class="col-md-6 p-5 bg-white">
-        <h2 class="text-center mb-4">Fasco</h2>
-        <p class="text-center mb-4">Create Account</p>
+      <div class="col-md-5 p-5">
+        <h1 class="text-start mb-4">Fasco</h1>
+        <p class="text-start mb-4">Create Account</p>
         <div class="d-flex gap-3 mb-4">
           <button class="btn btn-outline-secondary w-50">
             <img src="../assets/login/image 939.svg" alt="gmail" />
@@ -27,7 +25,7 @@
           </button>
         </div>
         <div class="text-center mb-4">
-          <span class="text-muted"> - OR -</span>
+          <span class="text-muted fw-bold"> - OR -</span>
         </div>
 
         <form action="#">
@@ -59,7 +57,7 @@
             <input
               type="password"
               class="form-control border-0 border-bottom"
-              placeholder="Password"
+              placeholder="Password "
             />
             <input
               type="password"
@@ -81,6 +79,7 @@
             </RouterLink>
           </div>
         </form>
+        <p class="text-end pt-5 small">FASCO Terms & Conditions</p>
       </div>
     </div>
   </div>
@@ -89,5 +88,11 @@
 <style scoped>
 .colorText {
   color: #9d9d9d;
+}
+.login-box {
+  max-width: 850px;
+}
+.cover {
+  object-fit: cover;
 }
 </style>

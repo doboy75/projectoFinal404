@@ -59,6 +59,20 @@ const routes = [
      component: () => import( '../components/SingupCreate.vue') 
 
   }
+      ,
+   {
+    path:'/confirmWindow',
+    name:'confirmWindow',
+     component: () => import( '../View/ComfirmWindow.vue') 
+
+  }
+        ,
+   {
+    path:'/NewPassword',
+    name:'NewPassword',
+     component: () => import( '../View/NewPassword.vue') 
+
+  }
 
 
   

@@ -25,8 +25,9 @@ import { RouterLink } from 'vue-router';
           <RouterLink to="/SinginFasco" class="nav-link">Sign in </RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink to="/ForgetPassworld"></RouterLink
-          ><button class="btn btn-dark px-4 py-2 shadow">Sign up</button>
+          <RouterLink to="/singup" class="btn btn-dark px-4 py-2 shadow"
+            >Sing up</RouterLink
+          >
         </li>
       </ul>
     </div>
