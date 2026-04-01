@@ -1,11 +1,9 @@
 <template>
-  <div id="deals" class="container-fluid seccao-deals bg-seccao-deals">
+  <div id="deals" class="container-fluid bg-seccao-deals">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6 text-start">
-          <h2 class="h2 fw-bold colorTitulo mb-4" style="font-size: 46px">
-            Deals Of The Month
-          </h2>
+          <h2 class="h2 fw-bold colorTitulo mb-4 fs-1">Deals Of The Month</h2>
           <p class="colorTexto mb-5 h5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
             duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
@@ -68,11 +66,11 @@
               alt=""
               class="img-fluid"
             />
-            <img
+            <!--  <img
               src="../assets/ofertas/image (3).svg"
               alt=""
               class="img-fluid"
-            />
+            /> -->
           </div>
         </div>
       </div>
@@ -101,7 +99,7 @@ export default {
 }
 .bg-seccao-deals {
   background-color: #fafafa;
-  padding-top: 121px;
+  padding-top: 12rem;
 }
 </style>
 

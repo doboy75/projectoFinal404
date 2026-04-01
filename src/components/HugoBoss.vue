@@ -1,11 +1,13 @@
 <template>
-  <div class="container-fluid padding_y">
+  <div class="container-fluid padding_y mt-5">
     <div class="row bgColor">
-      <img
-        src="../assets/hugoBoss/image (5).svg"
-        :alt="descricao"
-        class="col-md-5 img-fluid"
-      />
+      <div class="col-md-5">
+        <img
+          src="../assets/hugoBoss/image (5).svg"
+          :alt="descricao"
+          class="img-fluid"
+        />
+      </div>
       <div class="col-md-7 paddingEsquerda text-start bg_img bgColor py-5">
         <small class="textColor">Women Collection</small>
         <h2 class="h1 fw-bold my-3">Peaky Blinders</h2>
@@ -35,21 +37,23 @@
     <div class="container-fluid py-5">
       <div class="d-flex justify-content-between px-5">
         <div class="d-flex justify-content-center gap-2">
-          <span><img src="../assets/hugoBoss/icon (1).svg" alt="" /></span>
+          <span><img src="../assets/hugoBoss/icon (1).svg" alt="tools" /></span>
           <div class="text-start lh-sm gap-0">
             <p class="h5">High Quality</p>
             <p class="small smallColor">crafted from top materials</p>
           </div>
         </div>
         <div class="d-flex justify-content-center gap-2">
-          <span><img src="../assets/hugoBoss/icon.svg" alt="" /></span>
+          <span><img src="../assets/hugoBoss/icon.svg" alt="tools" /></span>
           <div class="text-start lh-sm">
             <p class="h5">Warrany Protection</p>
             <p class="small smallColor">Over 2 years</p>
           </div>
         </div>
         <div class="d-flex justify-content-center gap-2">
-          <span><img src="../assets/hugoBoss/Vector (1).svg" alt="" /></span>
+          <span
+            ><img src="../assets/hugoBoss/Vector (1).svg" alt="tools"
+          /></span>
           <div class="text-start lh-sm">
             <p class="h5">Free Shipping</p>
             <p class="small smallColor">Order over 150 $</p>
@@ -57,7 +61,9 @@
         </div>
         <div class="d-flex justify-content-center gap-2">
           <span
-            ><img src="../assets/hugoBoss/2891214031638194523 1.svg" alt=""
+            ><img
+              src="../assets/hugoBoss/2891214031638194523 1.svg"
+              alt="tools"
           /></span>
           <div class="text-start lh-sm">
             <p class="h5">24 / 7 Support</p>
@@ -95,12 +101,12 @@ export default {
   background-color: #f8f8f8;
 }
 .paddingEsquerda {
-  padding-left: 170px;
-  padding-right: 170px;
+  padding-left: 17rem;
+  padding-right: 17rem;
 }
-.padding_y {
-  padding: 124px 0;
-}
+/* .padding_y {
+  padding: 12rem 0;
+} */
 .smallColor {
   color: #484848;
 }

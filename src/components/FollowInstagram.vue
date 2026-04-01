@@ -10,41 +10,55 @@
       </p>
 
       <div class="container-fluid d-flex justify-content-center">
-        <img
-          src="../assets/Follow/image (6).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
-        <img
-          src="../assets/Follow/image (12).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
-        <img
-          src="../assets/Follow/image (7).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
-        <img
-          src="../assets/Follow/image (8).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
-        <img
-          src="../assets/Follow/image (9).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
-        <img
-          src="../assets/Follow/image (10).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
-        <img
-          src="../assets/Follow/image (11).svg"
-          alt="seguidores img-fluid"
-          class="img-hover"
-        />
+        <div>
+          <img
+            src="../assets/Follow/image (6).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/Follow/image (12).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/Follow/image (7).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/Follow/image (8).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/Follow/image (9).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/Follow/image (10).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/Follow/image (11).svg"
+            alt="seguidores "
+            class="img-hover img-fluid"
+          />
+        </div>
       </div>
     </div>
   </div>
