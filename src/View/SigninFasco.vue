@@ -30,10 +30,11 @@
           <span class="text-muted"> - OR -</span>
         </div>
 
-        <form action="#">
+        <form @submit.prevent="signin" action="#">
           <div class="mb-3">
             <input
               type="email"
+              v-model="email"
               class="form-control border-0 border-bottom"
               placeholder="Email"
             />
@@ -42,16 +43,19 @@
           <div class="mb-3">
             <input
               type="password"
+              v-model="senha"
               class="form-control border-0 border-bottom"
               placeholder="password"
             />
           </div>
 
-          <button class="btn btn-dark w-100 mb-3">Sign In</button>
-
-          <button class="btn btn-outline-primary w-100 mb-3">
-            Register Now
+          <button class="btn btn-dark w-100 mb-3" :disabled="loading">
+            {{ loading ? "Loading..." : "Sign In" }}
           </button>
+
+          <RouterLink to="/singup" class="btn btn-outline-primary w-100 mb-3">
+            Register Now
+          </RouterLink>
           <div class="text-end">
             <RouterLink to="/ForgetPassworld" class="small"
               >Forget Password</RouterLink
@@ -62,6 +66,44 @@
     </div>
   </div>
 </template>
+
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      email: "",
+      senha: "",
+      loading: false,
+      erros: [],
+    };
+  },
+  methods: {
+    async signin() {
+      try {
+        this.loading = true;
+        const { data } = await axios.post(
+          "http://localhost:3001/v1/api/auth/login",
+          {
+            email: this.email,
+            password: this.senha,
+          }
+        );
+        console.log(data);
+        localStorage.setItem("access_token", data.access_token);
+        this.$router.push("/");
+      } catch (err) {
+        console.log(err.message);
+      } finally {
+        this.loading = false;
+      }
+    },
+  },
+};
+</script>
+
 
 <style scoped>
 .login-box {

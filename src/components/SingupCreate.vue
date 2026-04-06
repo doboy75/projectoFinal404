@@ -28,14 +28,16 @@
           <span class="text-muted fw-bold"> - OR -</span>
         </div>
 
-        <form action="#">
+        <form action="#" @submit.prevent="signup">
           <div class="mb-3 d-flex gap-4">
             <input
               type="text"
+              v-model="firstname"
               class="form-control border-0 border-bottom"
               placeholder="First tName"
             /><input
               type="text"
+              v-model="lastname"
               class="form-control border-0 border-bottom"
               placeholder="Last Name"
             />
@@ -44,11 +46,13 @@
           <div class="mb-3 d-flex gap-4">
             <input
               type="email"
+              v-model="email"
               class="form-control border-0 border-bottom"
               placeholder="Email Address"
             />
             <input
               type="number"
+              v-model="number"
               class="form-control border-0 border-bottom"
               placeholder="Phone Number"
             />
@@ -56,11 +60,13 @@
           <div class="mb-3 d-flex gap-4">
             <input
               type="password"
+              v-model="password"
               class="form-control border-0 border-bottom"
               placeholder="Password "
             />
             <input
               type="password"
+              v-model="confirmPassword"
               class="form-control border-0 border-bottom"
               placeholder="Confirm Password"
             />
@@ -84,6 +90,46 @@
     </div>
   </div>
 </template>
+
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      number: "",
+    };
+  },
+  methods: {
+    async signup() {
+      try {
+        this.loading = true;
+        const { data } = await axios.post(
+          "http://localhost:3001/v1/api/auth/signup",
+          {
+            email: this.email,
+            password: this.password,
+            lastname: this.lastname,
+            firstname: this.firstname,
+          }
+        );
+        console.log(data);
+        localStorage.setItem("access_token", data.access_token);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.loading = false;
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .colorText {

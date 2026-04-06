@@ -131,11 +131,11 @@
 
         <button class="btn btn-dark w-100 my-3 shadow">Pay Now</button>
 
-        <small class="text-center pb-5"
-          ><a href="#" class="text-decoration-none text-black small d-block"
+        <div class="text-center pb-5 my-5">
+          <a href="#" class="text-decoration-none text-black small d-block"
             >copyright 2022 FASCO .All rights Rasaved</a
-          ></small
-        >
+          >
+        </div>
       </div>
 
       <div class="col-md-6 ps-5">
@@ -178,16 +178,19 @@
   </div>
 
   <SubscribeFasco></SubscribeFasco>
+  <FooterFasco></FooterFasco>
 </template>
 
 <script>
 import SubscribeFasco from "@/components/SubscribeFasco.vue";
 import NavReutilizavel from "./NavReutilizavel.vue";
+import FooterFasco from "@/components/FooterFasco.vue";
 
 export default {
   components: {
     NavReutilizavel,
     SubscribeFasco,
+    FooterFasco,
   },
 
   data() {
