@@ -16,14 +16,16 @@
         <h2 class="text-center mb-4">FASCO</h2>
         <p class="text-center mb-4">Forget Password</p>
 
-        <form action="#">
+        <form action="#" @submit.prevent="forgotPassword">
           <div class="mb-3 d-flex gap-2">
             <input
               type="text"
+              v-model="firstName"
               class="form-control border-0 border-bottom"
               placeholder="FirstName"
             /><input
               type="text"
+              v-model="lastName"
               class="form-control border-0 border-bottom"
               placeholder="lastName"
             />
@@ -31,22 +33,24 @@
 
           <div class="mb-3 d-flex gap-2">
             <input
-              type="password"
+              type="email"
+              v-model="email"
               class="form-control border-0 border-bottom"
               placeholder="Email address"
             /><input
               type="number"
+              v-model="number"
               class="form-control border-0 border-bottom"
               placeholder="Phone Number"
             />
           </div>
 
-          <button class="btn btn-dark w-100 mb-3">
+          <router-link to="#" class="btn btn-dark w-100 mb-3">
             Send Confirmation Code
-          </button>
+          </router-link>
 
           <div class="text-center">
-            <RouterLink to="#" class="small text-dark"
+            <RouterLink to="/SinginFasco" class="small text-dark"
               >Already have an account? Login</RouterLink
             >
           </div>
@@ -55,6 +59,19 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      email: "",
+      number: "",
+    };
+  },
+};
+</script>
 
 <style scoped>
 .login-box {

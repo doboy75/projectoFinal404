@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router';
 <template>
   <nav class="navbar navbar-expand-lg px-4 margemButtom">
     <div class="container d-flex justify-content-between px-5" id="navegacao">
-      <RouterLink class="navbar-brand fs-2 fw-bold">FASCO</RouterLink>
+      <RouterLink to="#" class="navbar-brand fs-2 fw-bold">FASCO</RouterLink>
 
       <ul class="navbar-nav align-items-center gap-4">
         <li class="nav-item">

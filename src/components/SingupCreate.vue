@@ -101,9 +101,11 @@ export default {
       firstname: "",
       lastname: "",
       email: "",
+      number: "",
       password: "",
       confirmPassword: "",
-      number: "",
+      loading: false,
+      erros: [],
     };
   },
   methods: {
@@ -113,16 +115,17 @@ export default {
         const { data } = await axios.post(
           "http://localhost:3001/v1/api/auth/signup",
           {
+            firstname: this.firstname,
+            lastname: this.lastname,
             email: this.email,
             password: this.password,
-            lastname: this.lastname,
-            firstname: this.firstname,
           }
         );
         console.log(data);
-        localStorage.setItem("access_token", data.access_token);
+        localStorage.setItem("register_token", data.register_token);
+        this.$router.push("/");
       } catch (err) {
-        console.log(err);
+        console.log(err.message);
       } finally {
         this.loading = false;
       }

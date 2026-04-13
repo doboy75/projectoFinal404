@@ -21,12 +21,13 @@
         <br />
 
         <div class="text-center">
-          <button
-            class="fs-5 py-3 px-5 bg-dark text-white rounded-3 border-0 shadow"
+          <router-link
+            to="/singup"
+            class="fs-5 py-3 px-5 bg-dark text-white rounded-3 border-0 shadow text-decoration-none"
             type="button "
           >
             Subscribe Now
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
